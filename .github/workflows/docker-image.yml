@@ -21,7 +21,7 @@ jobs:
     - name: Docker login
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
-        DOCKER_PASSWORD: ${{secrets.DOCKER_USER}}
+        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
       run: |   
         echo "USER length: ${#DOCKER_USER}"
         echo "PASS length: ${#DOCKER_PASSWORD}"
