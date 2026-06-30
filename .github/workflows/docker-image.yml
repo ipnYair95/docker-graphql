@@ -28,7 +28,9 @@ jobs:
     - name: Build the Docker Image
       run: |
         docker build -t yairmarin/docker-graphq:0.0.2 .
+        docker build -t yairmarin/docker-graphq:latest .
 
     - name: Docker Push
       run: |
         docker push yairmarin/docker-graphq:0.0.2
+        docker push yairmarin/docker-graphq:latest
