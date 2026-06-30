@@ -22,7 +22,9 @@ jobs:
       env:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_USER}}
-      run: |
+      run: |   
+        echo "USER length: ${#DOCKER_USER}"
+        echo "PASS length: ${#DOCKER_PASSWORD}"
         echo "Iniciando login"
         echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER" --password-stdin
         echo "Fin del login"
