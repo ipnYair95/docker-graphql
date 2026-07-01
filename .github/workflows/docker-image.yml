@@ -31,9 +31,7 @@ jobs:
         DOCKER_USER: ${{secrets.DOCKER_USER}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
       run: |   
-        echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER" --password-stdin
-        echo "New version is $NEW_VERSION !!!!"
-        
+        echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER" --password-stdin        
 
     - name: Build the Docker Image
       env:
