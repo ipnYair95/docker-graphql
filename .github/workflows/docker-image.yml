@@ -43,7 +43,7 @@ jobs:
         docker build -t yairmarin/docker-graphq:latest .
 
     - name: Docker Push
-     env:
+      env:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
         docker push yairmarin/docker-graphq:${NEW_VERSION}
